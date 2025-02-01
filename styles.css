@@ -1,0 +1,140 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #9bf5f8;
+    line-height: 1.6;
+    position: relative; /* posisyon pseudo elem */
+}
+
+/* Background image pseudo element */
+body::before {
+    content: ""; /* Empty pseudo element */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/gaming.avif'); /* bg gaming */
+    background-size: cover; /* image cover vp */
+    background-position: center; /* mid */
+    background-repeat: no-repeat; 
+    filter: blur(8px); 
+    z-index: -1; /* pseudo elem-behind =) */
+}
+
+/* Style for Back Button */
+.back-button {
+    position: absolute;  /* Position it wherever you want on the page */
+    top: 20px;           /* Adjust vertical position */
+    left: 20px;          /* Adjust horizontal position */
+    padding: 10px 20px;  /* Button padding */
+    background-color: #333; /* Background color */
+    color: white;        /* Text color */
+    text-decoration: none;  /* Remove underline */
+    font-size: 18px;     /* Font size */
+    border-radius: 5px;  /* Rounded corners */
+}
+
+.back-button:hover {
+    background-color: #555; /* Darker shade on hover */
+}
+
+/* Header Styles */
+header {
+    background-color: #2c3e50;
+    color: rgb(255, 0, 0);
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Section */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Profile Section */
+.profile-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-img.zoomed {
+    transform: scale(2); /* pic scale */
+}
+
+/* Videos and Images Section */
+.videos-section, .images-section {
+    margin-top: 40px;
+}
+
+.videos-section h2, .images-section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.videos, .images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.video, .image-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #2c3e50;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 15px 0;
+}
